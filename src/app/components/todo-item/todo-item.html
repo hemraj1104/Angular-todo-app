@@ -1,0 +1,11 @@
+<li appHighlightCompletedTodo [isCompleted]="todo().completed" class="todos__item">
+  <!-- id="todo-{{ todo().id }}" : used to click checkbox with sentence -->
+  <input 
+    id="todo-{{ todo().id }}" 
+    type="checkbox" 
+    [checked]="todo().completed" 
+    (change)="this.todoClicked()"
+    />
+  <!-- for="todo-{{todo().id}}": but forget this write as well -->
+  <label for="todo-{{ todo().id }}">{{ todo().title | titlecase}}</label>
+</li>
